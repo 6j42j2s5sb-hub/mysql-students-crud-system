@@ -67,7 +67,7 @@ Try/except su tutte le operazioni critiche
 
 Messaggi chiari e logging degli errori
 
-🗄️ Schema del database
+ Schema del database
 Codice
 +-----------+         +----------------+
 |  corsi    | 1 ----∞ |   studenti     |
