@@ -4,7 +4,7 @@ Il progetto dimostra competenze reali di:
 interazione Python ↔ database
 
 SQL
-
+ 
 gestione dati relazionali
 
 logging
