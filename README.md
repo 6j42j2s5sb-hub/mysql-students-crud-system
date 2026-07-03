@@ -1,51 +1,81 @@
-# mysql-students-crud-system
-Python + MySQL project implementing a complete CRUD system (Create, Read, Update, Delete) for managing students and courses. Includes database creation scripts, modular Python code, error handling, logging, and a clean architecture.
+Sistema CRUD (Create, Read, Update, Delete) per la gestione di studenti e corsi, sviluppato in Python con connessione a MySQL.
+Il progetto dimostra competenze reali di:
 
+interazione Python ↔ database
 
+SQL
 
-Technologies
-Python
+gestione dati relazionali
+
+logging
+
+modularità del codice
+
+architettura pulita
+
+CRUD completo
+
+gestione errori
+
+Perfetto per ruoli Data Analyst e Data Engineer.
+
+Tecnologie utilizzate
+Python 
 
 MySQL
 
 mysql-connector-python
 
-pandas
+Logging
 
-logging
+SQL
 
-✔ CRUD completo studenti
-Inserimento
+Struttura del progetto
+Codice
+mysql-students-crud-system/
+│
+├── src/
+│   ├── main.py
 
-Modifica
+│
+└── sql/
+    ├── create_database.sql     → crea il database
+    ├── create_tables.sql       → crea le tabelle
+    └── sample_data.sql         → dati di esempio
+    
+Gestione studenti (CRUD)
+Inserimento studente
 
-Eliminazione
+Modifica nome/cognome
 
-Ricerca per nome, cognome, id
+Eliminazione per nome/cognome/id
 
-✔ CRUD corsi
-Inserimento
+Ricerca per nome/cognome/id
 
-Ricerca
+ Gestione corsi
+Inserimento corso
 
-Collegamento studenti → corsi
+Visualizzazione corsi disponibili
 
-✔ Logging
-Operazioni registrate
+ Logging
+Ogni operazione viene registrata nel file app.log
 
-Errori gestiti
+Tracciamento errori e modifiche
 
-Tracciamento modifiche
+ Gestione errori
+Try/except su tutte le operazioni critiche
 
-✔ Modularità
-Codice diviso in moduli
+Messaggi chiari e logging degli errori
 
-Funzioni riutilizzabili
-
-Architettura pulita
-
-✔ SQL scripts inclusi
-Creazione database
-
-Creazione tabelle
-
+🗄️ Schema del database
+Codice
++-----------+         +----------------+
+|  corsi    | 1 ----∞ |   studenti     |
++-----------+         +----------------+
+| id        |         | id_stud        |
+| nome_corso|         | nome           |
+|           |         | cognome        |
+|           |         | corso_di_studio|
++-----------+         +----------------+
+Relazione uno-a-molti:
+un corso → molti studenti.
